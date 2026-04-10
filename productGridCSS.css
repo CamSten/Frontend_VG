@@ -1,0 +1,109 @@
+#allCategoryButtons {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    flex-wrap: wrap;
+    left: 0;
+    width: 100%;
+    background-color: #2D8CFF;
+    color: white;
+    padding: 8px 0;
+    min-height: fit-content;
+    z-index: 999;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    top: 80px
+}
+.catButton {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: white;
+}
+.catButton:hover{
+    background-color: darkblue;
+    color: white;
+}
+.catButton:active{
+    background-color: darkblue;
+    color: white;
+}
+.activeCatButton{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: darkblue;
+    color: white;
+}
+.col {
+    padding-bottom: 10px;
+}
+.grid-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-card-header {
+    margin-bottom: 10px;
+}
+
+.grid-card-body {
+    margin-top: 10px;
+}
+
+.grid-card:hover {
+    border-color: #2D8CFF;
+    content-visibility: visible;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.grid-card-price {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.grid-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.grid-card-img-top {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.grid-button {
+    background-color: #2D8CFF;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+.grid-card:hover .grid-button {
+    opacity: 1;
+}
+
+.grid-button:hover {
+    background-color: #1e70d1;
+}
+
+a:link {
+    color: black;
+    text-decoration: none
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}

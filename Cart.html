@@ -2,43 +2,136 @@
 <html lang="en">
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arctic Store</title>
 </head>
 
 <body>
-    <header>
-        <h1>Arctic Store</h1>
-    </header>
-    <main>
-        <section class="cart-items">
-            <h2>Your cart</h2>
-            <article class="cart-item-card">
-                <header>
-                    <h3>Fjallraven - Foldsack No. 1</h3>
-                </header>
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="Fjallraven - Foldsack No. 1">
-                <p>Price: <span class="price"></span></p>
-                <p>Color: <span class="color"></span></p>
-                <p>Size: <span class="size"></span></p>
+    <header class="main-header">
 
-                <select class="quantity-box" name="quantity">
-                    <option class="quantity-option" value="1">1</option>
-                </select>
-                <button class="remove-single-stock">
-                    &#x2715
-                </button>
-                <p class="product-sum"> </p>
-            </article>
-        </section>
-        <section class="sum-section">
-            <button class="remove-all-stock">
-                Clear cart
-            </button>
-            <p class="total-sum"> </p>
-        </section>
+        <div class="container" id="headerContainer">
+            <div class="row">
+                <div class="col-sm-2" id="headerLink">
+                    <a href="viewAllProducts.html" class="text-decoration-none fw-bold" id="backToShopLink"
+                        style="color:white">&larr; Back to Shop</a>
+                </div>
+                <div class="col-sm-8">
+                    <h1>Arctic Store</h1>
+                    <h2>Your cart:</h2>
+                </div>
+                <div class="col-sm-1">
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <table class="table" id="productsInCart">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="tableHeader">
+                        <h4>Product</h4>
+                    </th>
+                    <th class="tableHeader">
+                        <h4>Price</h4>
+                    </th>
+                    <th class="tableHeader">
+                        <h4>Quantity</h4>
+                    </th>
+                    <th class="tableHeader"></th>
+                </tr>
+            </thead>
+
+            <tbody class="cartTableBody" id="cartTableBody">
+
+            </tbody>
+            <tfoot id="cartFooter">
+         
+            </tfoot>
+        </table>
+        </div>
+
     </main>
+    <div class="popup" id="OrderPopup">
+        <div class="popupContent" id="popupBox">
+            <form id="orderForm">
+                <h1>Billing Form</h1>
+                <div id="formError" class="hidden">
+                    Please fill out the form correctly
+                </div>
+                <div class="formGroup">
+                    <label for="name">Full name</label>
+                    <br>
+                    <input type="text" class="formControl inputBase" id="name" placeholder="Enter full name" required>
+                    <br>
+                    <small class="errorMessage"></small>
+                </div>
+                <br>
+                <div class="formGroup">
+                    <label for="email">Email address</label>
+                    <br>
+                    <input type="text" class="formControl inputBase" id="email" placeholder="Enter email" required>
+                    <br>
+                    <small class="errorMessage"></small>
+                </div>
+                <br>
+                <div class="formGroup">
+                    <label for="phone">Phone number</label>
+                    <br>
+                    <input type="text" class="formControl inputBase" id="phone" placeholder="Enter phone number" required>
+                    <br>
+                    <small class="errorMessage"></small>
+                </div>
+                <br>
+                <div class="formGroup">
+                    <label for="address">Address</label>
+                    <br>
+                    <input type="text" class="formControl inputBase" id="address" placeholder="Enter address" required>
+                    <br>
+                    <small class="errorMessage"></small>
+                </div>
+                <br>
+                <div class="formGroup">
+                    <label for="postalnr">Zip code</label>
+                    <br>
+                    <input type="text" class="formControl inputBase" id="postalnr" placeholder="Enter postal number" required>
+                    <br>
+                    <small class="errorMessage"></small>
+                </div>
+                <br>
+                <div class="formGroup">
+                    <label for="county">Country</label>
+                    <br>
+                    <input type="text" class="formControl inputBase" id="county" placeholder="Enter County" required>
+                    <br>
+                    <small class="errorMessage"></small>
+                </div>
+                <br>
+                <button type="submit" class="orderButton">Submit</button>
+            </form>
+
+            <div id="successMessage" class="hidden">
+                <h2>Thank you for your purchase!</h2>
+                <p>It is now safe to close</p>
+            </div>
+            <div>
+                <button type="button" id="closeButton">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cartScript.js"> </script>
+    <script src="orderForm.js"> </script>
+    <script src="product.js"> </script>
+
 </body>
 
 </html>

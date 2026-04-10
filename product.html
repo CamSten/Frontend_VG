@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Store - Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container" id="headerContainer">
+            <div class="row">
+                <div class="col-sm-2" id="headerLink">
+                    <a href="viewAllProducts.html" class="text-decoration-none fw-bold" id="backToShopLink"
+                        style="color:white">&larr; Back to Shop</a>
+                </div>
+                <div class="col-sm-8">
+                    <h1>Arctic Store</h1>
+                </div>
+                <div class="col-sm-1">
+                    <button class="cartButton" id="cartSymbol">
+                        <i class="fa-solid fa-cart-shopping fa-2x" id="cSymbol"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container my-5">
+        <div class="row">
+            <div id="single-product-container" class="col">
+                <div class="text-center mt-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Added to cart:</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" id="modalBody">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="viewAllProducts.html" class="btn btn-primary" id="closeModal">
+                        Close
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
